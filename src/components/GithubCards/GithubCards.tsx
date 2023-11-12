@@ -9,6 +9,7 @@ export default function GitHubCards() {
   const api_key = process.env.REACT_APP_API_KEY;
 
   const repoList = [
+    baseURL(`project-index`),
     baseURL(`front-end`),
   ];
 
@@ -24,7 +25,7 @@ export default function GitHubCards() {
         },
         signal: signal
       }).then((res) => {
-        if (repoData.includes(res.data)) return;
+        // if (repoData.includes(res.data)) return;
         setRepoData((currentRepoData) =>
           [...currentRepoData, res.data].reduce((u, i) => u.includes(i) ? u : [...u, i], [])
         );
