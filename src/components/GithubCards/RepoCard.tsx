@@ -9,8 +9,8 @@ import {
   Typography,
   Grid,
 } from "@material-ui/core";
-import { purple } from "@material-ui/core/colors";
 import { RepoData } from "./RepoData";
+import githubIcon from "./github-svgrepo-com.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     "&:active": {
-      color: "#00008E",
+      color: "#000000",
     },
   },
   cardContent: {
@@ -44,8 +44,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "16px",
   },
   avatar: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
+    backgroundColor: 'white',
   },
   dot: {
     height: "12px",
@@ -70,7 +69,9 @@ const RepoCard = ({ repo }:RepoCardProps) => {
               <span
                 className="octicon octicon-repo"
                 style={{ fontSize: "20px" }}
-              ></span>
+              >
+                <img src={githubIcon} width="40" height="40" alt="GitHub logo"/>
+              </span>
             </Avatar>
           }
           title={
@@ -80,7 +81,7 @@ const RepoCard = ({ repo }:RepoCardProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.title}
-                style={{ textDecoration: "none", color: "#551A8B" }}
+                style={{ textDecoration: "none", color: "#000000" }}
               >
                 {repo.name}
               </a>{" "}
@@ -96,14 +97,14 @@ const RepoCard = ({ repo }:RepoCardProps) => {
             <React.Fragment>
               <span
                 className={classes.dot}
-                style={{ backgroundColor: 'purple' }}
+                style={{ backgroundColor: 'black' }}
               ></span>
               <Typography style={{ marginRight: "10px" }}>
                 {repo.language}
               </Typography>
             </React.Fragment>
           ) : null}
-          {repo.stargazers_count >= 0 ? (
+          {/* {repo.stargazers_count >= 0 ? (
             <React.Fragment>
               <a
                 href={repo.html_url}
@@ -112,7 +113,7 @@ const RepoCard = ({ repo }:RepoCardProps) => {
                 style={{
                   textDecoration: "none",
                   marginRight: "10px",
-                  color: "#551A8B",
+                  color: "#000000",
                 }}
               >
                 <span className="octicon octicon-star">
@@ -131,7 +132,7 @@ const RepoCard = ({ repo }:RepoCardProps) => {
                 style={{
                   textDecoration: "none",
                   marginRight: "10px",
-                  color: "#551A8B",
+                  color: "#000000",
                 }}
               >
                 <span className="octicon octicon-repo-forked">
@@ -139,7 +140,7 @@ const RepoCard = ({ repo }:RepoCardProps) => {
                 </span>
               </a>
             </React.Fragment>
-          ) : null}
+          ) : null} */}
         </CardActions>
       </Card>
     </Grid>
