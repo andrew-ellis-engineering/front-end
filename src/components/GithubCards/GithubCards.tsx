@@ -11,8 +11,8 @@ export default function GitHubCards() {
   const repoList = [
     baseURL(`project-index`),
     baseURL(`front-end`),
-    baseUrl(`golang-problem-solver`),
-    baseUrl(`aoc-2023`),
+    baseURL(`golang-problem-solver`),
+    baseURL(`aoc-2023`),
   ];
 
   const [repoData, setRepoData] = useState<RepoData[]>([]);
