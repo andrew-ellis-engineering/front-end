@@ -12,7 +12,7 @@ export default function GitHubCards() {
     baseURL(`project-index`),
     baseURL(`front-end`),
     baseURL(`golang-problem-solver`),
-    baseURL(`aoc-2023`),
+    baseURL(`aoc-ts-2023`),
   ];
 
   const [repoData, setRepoData] = useState<RepoData[]>([]);
